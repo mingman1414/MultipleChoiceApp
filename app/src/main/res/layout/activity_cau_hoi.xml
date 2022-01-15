@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CauHoiActivity"
+    android:background="#F0FFFF"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/textViewDiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm: 0"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/textViewThuTuCauHoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDiem"
+        android:text="Câu hỏi: 1/n"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/textViewMonHoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Môn học: abc"
+        android:layout_below="@id/textViewThuTuCauHoi"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/textViewDongHo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="40sp"
+        android:freezesText="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/textViewCauHoi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_above="@id/radioGroupDapAn"
+        android:layout_marginBottom="16dp"
+        android:text="Câu hỏi gì đó?"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupDapAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đáp án A"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đáp án B"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đáp án C"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đáp án D"
+            android:freezesText="true"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonTraLoi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trả lời"
+        android:layout_marginTop="16dp"
+        android:freezesText="true"
+        android:layout_below="@id/radioGroupDapAn"/>
+</RelativeLayout>

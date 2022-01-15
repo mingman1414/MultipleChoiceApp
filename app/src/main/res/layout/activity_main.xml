@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF5EE"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trắc nghiệm" />
+
+    <Spinner
+        android:id="@+id/spinnerMonHoc"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" >
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/textviewDiemCao"
+        android:textColor="#FF3D00"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:text="Điểm cao: 100"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/buttonBatDau"
+        android:textColor="@color/black"
+        android:backgroundTint="#66CDAA"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:text="Bắt đầu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+
+
+</LinearLayout>
