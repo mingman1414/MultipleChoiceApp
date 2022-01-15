@@ -108,9 +108,13 @@ public class CauHoiActivity extends AppCompatActivity {
 
             txtCauHoi.setText(cauHoiHienTai.getCauhoi());
             radA.setText(cauHoiHienTai.getDapana());
+            radA.setBackgroundResource(R.drawable.round_back_white_stroke);
             radB.setText(cauHoiHienTai.getDapanb());
+            radB.setBackgroundResource(R.drawable.round_back_white_stroke);
             radC.setText(cauHoiHienTai.getDapanc());
+            radC.setBackgroundResource(R.drawable.round_back_white_stroke);
             radD.setText(cauHoiHienTai.getDapand());
+            radD.setBackgroundResource(R.drawable.round_back_white_stroke);
 
             cauhoiCounter++;
 
@@ -172,26 +176,34 @@ public class CauHoiActivity extends AppCompatActivity {
     }
 
     private void showDapAn() {
-        radA.setTextColor(Color.RED);
-        radB.setTextColor(Color.RED);
-        radC.setTextColor(Color.RED);
-        radD.setTextColor(Color.RED);
+        radA.setTextColor(Color.WHITE);
+        radA.setBackgroundResource(R.drawable.round_back_red);
+        radB.setTextColor(Color.WHITE);
+        radB.setBackgroundResource(R.drawable.round_back_red);
+        radC.setTextColor(Color.WHITE);
+        radC.setBackgroundResource(R.drawable.round_back_red);
+        radD.setTextColor(Color.WHITE);
+        radD.setBackgroundResource(R.drawable.round_back_red);
 
         switch(cauHoiHienTai.getDapandung()){
             case 1:
-                radA.setTextColor(Color.GREEN);
+                radA.setTextColor(Color.WHITE);
+                radA.setBackgroundResource(R.drawable.round_back_green);
                 txtCauHoi.setText("Đáp án là A");
                 break;
             case 2:
-                radB.setTextColor(Color.GREEN);
+                radB.setTextColor(Color.WHITE);
+                radB.setBackgroundResource(R.drawable.round_back_green);
                 txtCauHoi.setText("Đáp án là B");
                 break;
             case 3:
-                radC.setTextColor(Color.GREEN);
+                radC.setTextColor(Color.WHITE);
+                radC.setBackgroundResource(R.drawable.round_back_green);
                 txtCauHoi.setText("Đáp án là C");
                 break;
             case 4:
-                radD.setTextColor(Color.GREEN);
+                radD.setTextColor(Color.WHITE);
+                radD.setBackgroundResource(R.drawable.round_back_green);
                 txtCauHoi.setText("Đáp án là D");
                 break;
         }

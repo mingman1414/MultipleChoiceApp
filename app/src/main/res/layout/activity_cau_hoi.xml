@@ -1,95 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".CauHoiActivity"
+    android:orientation="vertical"
     android:background="#F0FFFF"
-    android:padding="16dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/textViewDiem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Điểm: 0"
-        android:freezesText="true"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1F6BBB">
+
+
+            <TextView
+                android:id="@+id/textViewDiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:text="Điểm:"/>
+
+        <TextView
+            android:id="@+id/textViewMonHoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Mon hoc"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/timer"/>
+
+            <TextView
+                android:id="@+id/textViewDongHo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="00:00"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textViewThuTuCauHoi"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewDiem"
-        android:text="Câu hỏi: 1/n"
-        android:freezesText="true"/>
-
-    <TextView
-        android:id="@+id/textViewMonHoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Môn học: abc"
-        android:layout_below="@id/textViewThuTuCauHoi"
-        android:freezesText="true"/>
-
-    <TextView
-        android:id="@+id/textViewDongHo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="00:00"
-        android:textSize="40sp"
-        android:freezesText="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_back_white"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="1/10"
+        android:textColor="#1F6BB8"/>
 
     <TextView
         android:id="@+id/textViewCauHoi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:layout_above="@id/radioGroupDapAn"
-        android:layout_marginBottom="16dp"
-        android:text="Câu hỏi gì đó?"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_back_cyan"
+        android:gravity="center"
+        android:minHeight="100dp"
+        android:paddingStart="20dp"
+        android:textColor="#CC000000"
+        android:textSize="16sp"
+        android:text="Cau hoi nam o day"/>
 
     <RadioGroup
         android:id="@+id/radioGroupDapAn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true">
 
         <RadioButton
             android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đáp án A"
-            android:freezesText="true"/>
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="50dp"
+            android:text="dap an"
+            android:background="@drawable/round_back_white_stroke"
+            android:textAllCaps="false"
+            android:textColor="#1F6BB8"/>
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đáp án B"
-            android:freezesText="true"/>
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="dap an"
+            android:background="@drawable/round_back_white_stroke"
+            android:textAllCaps="false"
+            android:textColor="#1F6BB8"/>
 
         <RadioButton
             android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đáp án C"
-            android:freezesText="true"/>
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="dap an"
+            android:background="@drawable/round_back_white_stroke"
+            android:textAllCaps="false"
+            android:textColor="#1F6BB8"/>
 
         <RadioButton
             android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đáp án D"
-            android:freezesText="true"/>
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="dap an"
+            android:background="@drawable/round_back_white_stroke"
+            android:textAllCaps="false"
+            android:textColor="#1F6BB8"/>
     </RadioGroup>
 
     <Button
         android:id="@+id/buttonTraLoi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Trả lời"
-        android:layout_marginTop="16dp"
-        android:freezesText="true"
-        android:layout_below="@id/radioGroupDapAn"/>
-</RelativeLayout>
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:text="tra loi"
+        android:backgroundTint="#1F6BBB"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

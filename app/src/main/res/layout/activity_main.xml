@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFF5EE"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:textStyle="bold"
-        android:layout_marginTop="70dp"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trắc nghiệm" />
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:src="@drawable/logo"/>
 
     <Spinner
+        android:background="@drawable/style_spinner"
         android:id="@+id/spinnerMonHoc"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
