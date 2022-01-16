@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".KetQuaActivity">
+
+    <ImageView
+        android:id="@+id/imgKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/congrat" />
+
+    <TextView
+        android:id="@+id/textChucMung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgKetQua"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Chúc mừng bạn đã hoàn thành bài trắc nghiệm"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textChucMung"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Điểm:"
+        android:textColor="#00C853"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/btnNhapDiem"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#66CDAA"
+        android:text="Về trang chủ"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnNhapDiem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#66CDAA"
+        android:text="Nhập điểm"
+        android:textColor="#000000" />
+
+</RelativeLayout>

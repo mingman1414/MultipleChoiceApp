@@ -53,14 +53,14 @@ public class CauHoiActivity extends AppCompatActivity {
     private int cauhoiCounter;
 
     private int tongsoCauHoi = 10;
-    private int diem;
+    private int diem = 0;
 
     private boolean traloi;
     private CauHoi cauHoiHienTai;
     private int count  = 0;
 
 
-    String urlGetData = "http://192.168.1.13:8080/DoAnAndroid/getcauhoi.php?id=";
+    String urlGetData = "http://192.168.1.14:8080/DoAnAndroid/getcauhoi.php?id=";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +75,7 @@ public class CauHoiActivity extends AppCompatActivity {
 
         txtMonHoc.setText("Môn học: " + tenMonHoc);
         //list câu hỏi theo id
-        GetData(urlGetData+monhocID);
+        GetData(urlGetData + monhocID);
         btnTraLoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,13 +107,13 @@ public class CauHoiActivity extends AppCompatActivity {
             cauHoiHienTai = arrayCauHoi.get(cauhoiCounter);
 
             txtCauHoi.setText(cauHoiHienTai.getCauhoi());
-            radA.setText(cauHoiHienTai.getDapana());
+            radA.setText("A. " + cauHoiHienTai.getDapana());
             radA.setBackgroundResource(R.drawable.round_back_white_stroke);
-            radB.setText(cauHoiHienTai.getDapanb());
+            radB.setText("B. " + cauHoiHienTai.getDapanb());
             radB.setBackgroundResource(R.drawable.round_back_white_stroke);
-            radC.setText(cauHoiHienTai.getDapanc());
+            radC.setText("C. " + cauHoiHienTai.getDapanc());
             radC.setBackgroundResource(R.drawable.round_back_white_stroke);
-            radD.setText(cauHoiHienTai.getDapand());
+            radD.setText("D. " + cauHoiHienTai.getDapand());
             radD.setBackgroundResource(R.drawable.round_back_white_stroke);
 
             cauhoiCounter++;
@@ -131,16 +131,18 @@ public class CauHoiActivity extends AppCompatActivity {
         }
         else
         {
-            ketThucCauHoi();
+//            ketThucCauHoi();
+            startKetQua();
         }
     }
 
     private void ketThucCauHoi() {
         //trả về main
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra("diem", diem);
-        setResult(RESULT_OK, resultIntent);
-        finish();
+//        Intent resultIntent = new Intent();
+//        resultIntent.putExtra("diem", diem);
+//        setResult(RESULT_OK, resultIntent);
+//        finish();
+
     }
 
     private void startCountDown(){
@@ -279,6 +281,16 @@ public class CauHoiActivity extends AppCompatActivity {
             ketThucCauHoi();
         }
         count = 0;
+    }
+
+    private void startKetQua(){
+        //chuyển đến activity ket qua
+        Intent intent = new Intent(CauHoiActivity.this, KetQuaActivity.class);
+        intent.putExtra("diem", diem);
+
+        //start for result để có thể nhận lại kết quả trả về
+//        startActivityForResult(intent,REQUEST_CODE_QUESTION);
+        startActivity(intent);
     }
 
     private void AnhXa() {

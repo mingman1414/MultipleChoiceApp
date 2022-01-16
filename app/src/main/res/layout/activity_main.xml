@@ -50,7 +50,17 @@
         android:text="Bắt đầu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+    </Button>
 
+    <Button
+        android:id="@+id/buttonXemDiem"
+        android:textColor="@color/black"
+        android:backgroundTint="#66CDAA"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Xem điểm cao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     </Button>
 
 

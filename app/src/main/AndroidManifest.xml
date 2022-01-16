@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDoAn">
         <activity
+            android:name=".ThemDiemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DiemCaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KetQuaActivity"
+            android:exported="false" />
+        <activity
             android:name=".CauHoiActivity"
             android:exported="false" />
         <activity

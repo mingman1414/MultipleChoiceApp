@@ -33,13 +33,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtDiemCao;
     Spinner spinnerMonHoc;
     private Button btnBatDau;
+    private Button btnXemDiem;
     ArrayList<MonHoc> arrayMonHoc;
     ArrayList<String> tenmonhoc = new ArrayList<String>();
     int vitrimon = 1;
 
     private static final int REQUEST_CODE_QUESTION = 1;
 
-    String urlGetData = "http://192.168.1.13:8080/DoAnAndroid/getmonhoc.php";
+    String urlGetData = "http://192.168.1.14:8080/DoAnAndroid/getmonhoc.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,11 +68,19 @@ public class MainActivity extends AppCompatActivity {
                 startCauHoi();
             }
         });
+
+        btnXemDiem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startXemDiem();
+            }
+        });
     }
 
     private void AnhXa() {
         txtDiemCao      = (TextView)    findViewById(R.id.textviewDiemCao);
         btnBatDau       = (Button)      findViewById(R.id.buttonBatDau);
+        btnXemDiem      = (Button)      findViewById(R.id.buttonXemDiem);
         spinnerMonHoc   = (Spinner)     findViewById(R.id.spinnerMonHoc);
     }
 
@@ -120,6 +129,24 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("tenmonhoc", tenMonHoc);
 
         //start for result để có thể nhận lại kết quả trả về
-        startActivityForResult(intent,REQUEST_CODE_QUESTION);
+//        startActivityForResult(intent,REQUEST_CODE_QUESTION);
+        startActivity(intent);
+    }
+
+    private void startXemDiem(){
+        //lấy id, tên môn học
+        String tenMonHoc = spinnerMonHoc.getSelectedItem().toString();
+//        Toast.makeText(MainActivity.this, tenMonHoc, Toast.LENGTH_SHORT).show();
+        //chuyển đến activity câu hỏi
+        Intent intent = new Intent(MainActivity.this, DiemCaoActivity.class);
+        intent.putExtra("id", vitrimon);
+        intent.putExtra("tenmonhoc", tenMonHoc);
+
+        Intent intent2 = new Intent(MainActivity.this, KetQuaActivity.class);
+        intent2.putExtra("id", vitrimon);
+
+        //start for result để có thể nhận lại kết quả trả về
+//        startActivityForResult(intent,REQUEST_CODE_QUESTION);
+        startActivity(intent);
     }
 }

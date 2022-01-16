@@ -13,13 +13,13 @@
         android:background="#1F6BBB">
 
 
-            <TextView
-                android:id="@+id/textViewDiem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="15dp"
-                android:text="Điểm:"/>
+        <TextView
+            android:id="@+id/textViewDiem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:text="Điểm: 0" />
 
         <TextView
             android:id="@+id/textViewMonHoc"
