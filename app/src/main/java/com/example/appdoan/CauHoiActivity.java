@@ -37,6 +37,7 @@ public class CauHoiActivity extends AppCompatActivity {
     private TextView txtThuTuCauHoi;
     private TextView txtMonHoc;
     private TextView txtDemNguoc;
+    private TextView txtViTriMon;
 
     private RadioGroup radgrpCauTraLoi;
     private RadioButton radA;
@@ -73,7 +74,8 @@ public class CauHoiActivity extends AppCompatActivity {
         int monhocID = intent.getIntExtra("id", 0);
         String tenMonHoc = intent.getStringExtra("tenmonhoc");
 
-        txtMonHoc.setText("Môn học: " + tenMonHoc);
+        txtMonHoc.setText(tenMonHoc);
+        txtViTriMon.setText(monhocID+"");
         //list câu hỏi theo id
         GetData(urlGetData + monhocID);
         btnTraLoi.setOnClickListener(new View.OnClickListener() {
@@ -284,12 +286,13 @@ public class CauHoiActivity extends AppCompatActivity {
     }
 
     private void startKetQua(){
+        String tenmonhoc = txtMonHoc.getText().toString();
+        String idmonhoc = txtViTriMon.getText().toString();
         //chuyển đến activity ket qua
         Intent intent = new Intent(CauHoiActivity.this, KetQuaActivity.class);
         intent.putExtra("diem", diem);
-
-        //start for result để có thể nhận lại kết quả trả về
-//        startActivityForResult(intent,REQUEST_CODE_QUESTION);
+        intent.putExtra("tenmonhoc", tenmonhoc);
+        intent.putExtra("idmonhoc", idmonhoc);
         startActivity(intent);
     }
 
@@ -299,6 +302,7 @@ public class CauHoiActivity extends AppCompatActivity {
         txtThuTuCauHoi  = (TextView)    findViewById(R.id.textViewThuTuCauHoi);
         txtMonHoc       = (TextView)    findViewById(R.id.textViewMonHoc);
         txtDemNguoc     = (TextView)    findViewById(R.id.textViewDongHo);
+        txtViTriMon     = (TextView)    findViewById(R.id.txtViTriMon);
         radgrpCauTraLoi = (RadioGroup)  findViewById(R.id.radioGroupDapAn);
         radA            = (RadioButton) findViewById(R.id.radioButton1);
         radB            = (RadioButton) findViewById(R.id.radioButton2);

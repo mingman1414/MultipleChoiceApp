@@ -21,12 +21,23 @@
             android:layout_marginStart="15dp"
             android:text="Điểm: 0" />
 
-        <TextView
-            android:id="@+id/textViewMonHoc"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
             android:layout_centerInParent="true"
-            android:text="Mon hoc"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Môn học: " />
+            <TextView
+                android:id="@+id/textViewMonHoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACBd " />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -147,5 +158,12 @@
         android:text="tra loi"
         android:backgroundTint="#1F6BBB"
         android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/txtViTriMon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:visibility="gone"/>
 
 </LinearLayout>

@@ -14,14 +14,13 @@
             android:layout_height="wrap_content"
             android:text="Nhập Điểm"
             android:textSize="25sp"/>
-
         <TextView
-            android:id="@+id/textID"
+            android:id="@+id/textIdMon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="123"
             android:textSize="25sp"
-            android:visibility="invisible"/>
+            android:visibility="gone"/>
     </TableRow>
     <TableRow
         android:id="@+id/tr2"
@@ -89,6 +88,14 @@
         android:id="@+id/tr5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonHuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:layout_column="0"
+            android:backgroundTint="#66CDAA"/>
 
         <Button
             android:id="@+id/buttonThem"

@@ -7,6 +7,13 @@
     android:background="@drawable/background"
     tools:context=".KetQuaActivity">
 
+    <TextView
+        android:id="@+id/txtMonHocID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:visibility="gone"/>
+
     <ImageView
         android:id="@+id/imgKetQua"
         android:layout_width="match_parent"
@@ -22,24 +29,71 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgKetQua"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Chúc mừng bạn đã hoàn thành bài trắc nghiệm"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtDiem"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearMon"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textChucMung"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Điểm:"
-        android:textColor="#00C853"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Môn: "
+
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ABC"
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearMon1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearMon"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearMon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Điểm: "
+            android:textColor="#00C853"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDiem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearMon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textColor="#00C853"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 
     <Button

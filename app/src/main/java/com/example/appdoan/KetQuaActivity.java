@@ -12,6 +12,8 @@ import android.widget.Toast;
 public class KetQuaActivity extends AppCompatActivity {
 
     private TextView txtDiem;
+    private TextView txtMon;
+    private TextView txtIdMon;
     private Button btnHome;
     private Button btnThemDiem;
 
@@ -23,12 +25,19 @@ public class KetQuaActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         int diem = intent.getIntExtra("diem", 0);
-        txtDiem.setText("Điểm: " + diem);
+        txtDiem.setText(diem+"");
+
+        String tenmonhoc = intent.getStringExtra("tenmonhoc");
+        txtMon.setText(tenmonhoc);
+
+        String idmonhoc = intent.getStringExtra("idmonhoc");
+        txtIdMon.setText(idmonhoc);
 
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+//                finish();
+                startActivity(new Intent(KetQuaActivity.this, MainActivity.class));
             }
         });
 
@@ -42,20 +51,23 @@ public class KetQuaActivity extends AppCompatActivity {
     }
 
     private void NhapDiem() {
-//        Intent intent = getIntent();
-//        int diem = intent.getIntExtra("diem", 0);
-//
-//        Intent intent2 = getIntent();
-//        int idmonhoc = intent2.getIntExtra("id", 0);
+        String diem = txtDiem.getText().toString();
+        String tenmonhoc = txtMon.getText().toString();
+        String idmonhoc = txtIdMon.getText().toString();
 
-        Intent intent1 = new Intent(KetQuaActivity.this, ThemDiemActivity.class);
-        startActivity(intent1);
+        Intent intent = new Intent(KetQuaActivity.this, ThemDiemActivity.class);
+        intent.putExtra("tenmonhoc", tenmonhoc);
+        intent.putExtra("diem", diem);
+        intent.putExtra("idmonhoc", idmonhoc);
+        startActivity(intent);
     }
 
     private void AnhXa() {
         txtDiem         = (TextView)    findViewById(R.id.txtDiem);
+        txtMon          = (TextView)    findViewById(R.id.txtMon);
+        txtIdMon        = (TextView)    findViewById(R.id.txtMonHocID);
         btnHome         = (Button)      findViewById(R.id.btnHome);
-        btnThemDiem     = (Button)      findViewById(R.id.buttonThem);
+        btnThemDiem     = (Button)      findViewById(R.id.btnNhapDiem);
     }
 
 

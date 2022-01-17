@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="0"
-        android:background="@drawable/textview_back_cyan"
+        android:background="#40AAFF"
         android:textColor="@color/black"
         android:gravity="center"/>
     <TextView
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Ten"
-        android:background="@drawable/textview_back_cyan"
+        android:background="#40AAFF"
         android:textColor="@color/black"
         android:gravity="center"/>
     <TextView
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="0"
-        android:background="@drawable/textview_back_cyan"
+        android:background="#40AAFF"
         android:textColor="@color/black"
         android:gravity="center"/>
 </LinearLayout>

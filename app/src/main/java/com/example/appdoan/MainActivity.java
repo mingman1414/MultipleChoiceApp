@@ -141,12 +141,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, DiemCaoActivity.class);
         intent.putExtra("id", vitrimon);
         intent.putExtra("tenmonhoc", tenMonHoc);
-
-        Intent intent2 = new Intent(MainActivity.this, KetQuaActivity.class);
-        intent2.putExtra("id", vitrimon);
-
-        //start for result để có thể nhận lại kết quả trả về
-//        startActivityForResult(intent,REQUEST_CODE_QUESTION);
         startActivity(intent);
     }
 }
